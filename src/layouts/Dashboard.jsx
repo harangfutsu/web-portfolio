@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router"
 import { Outlet } from "react-router"
+import { useState } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ContrastIcon from '@mui/icons-material/Contrast';
+import smallMenu from "../assets/smallMenu.png"
 
 const Dashboard = () => {
     const navigate = useNavigate()
+    const [open, setOpen] = useState(false)
 
     const headerMenu = [
         {
@@ -31,35 +34,51 @@ const Dashboard = () => {
     ]
 
     return (
-        <div className="flex flex-col min-h-screen bg-white border-1">
+        <div className="flex flex-col min-h-screen">
 
-            <div className="flex flex-row justify-between items-center py-5 px-8 bg-slate-950 border border-b-slate-800 ">
-                <div>
-                    <span className="text-white font-semibold text-3xl" onClick={() => navigate('/')}><span className="text-yellow-400">//</span> Giyu Tomioka</span>
-                </div>
-                <div className="flex flex-row gap-15 font-semibold text-white text-sm antialiased ">
-                    {headerMenu.map((item, index) => (
-                        <button key={index}
-                        onClick={() => navigate(item.page)}
-                        >{item.title}</button>
-                    ))}
-                    <div className="flex flex-row gap-6 justify-center items-center">
-                    <LinkedInIcon sx={{ fontSize: 23, color: 'white' }} />
-                    <GitHubIcon sx={{ fontSize: 20, color: 'white' }}/>
-                    <ContrastIcon sx={{ fontSize: 20, color: 'white' }}/>
+            <div>
+                <div className="hidden sm:flex flex-row justify-between items-center py-5 px-8 bg-slate-950">
+                    <div>
+                        <span className="text-white font-semibold text-3xl" onClick={() => navigate('/')}><span className="text-yellow-400">//</span> Giyu Tomioka</span>
+                    </div>
+                    <div className="flex flex-row gap-15 font-semibold text-white text-sm antialiased">
+                        {headerMenu.map((item, index) => (
+                            <button key={index}
+                            onClick={() => navigate(item.page)}
+                            >{item.title}</button>
+                        ))}
+                        <div className="flex flex-row gap-6 justify-center items-center">
+                        <LinkedInIcon sx={{ fontSize: 23, color: 'white' }} />
+                        <GitHubIcon sx={{ fontSize: 20, color: 'white' }}/>
+                        <ContrastIcon sx={{ fontSize: 20, color: 'white' }}/>
+                        </div>
                     </div>
                 </div>
+                <div className="sm:hidden flex flex-row justify-between items-center py-5 px-8 bg-slate-950">
+                    <span className="text-white font-semibold text-2xl"><span className="text-yellow-400">//</span> Giyu</span>
+                    <img className="cursor-pointer" onClick={() => setOpen(!open)} src={smallMenu} alt="Menu" />
+                </div>
             </div>
+            { open && (
+                <div className="absolute sm:hidden top-[74px] right-0 shadow-md z-50 w-full">
+                    <ul className="flex flex-col bg-slate-950 divide-y divide-slate-800 border border-b-slate-800">
+                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white">Resume
+                        </li>
+                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white">Contact
+                        </li>
+                    </ul>
+                </div>
+            )}
 
             <div className="flex-1 overflow-auto flex flex-col">
                 <Outlet/>
             </div>
 
-            <div className="flex flex-row justify-between px-8 py-5 items-center bg-slate-950 border border-t-slate-800">
+            <div className="flex flex-row justify-between px-8 py-5 items-center bg-slate-950 ">
                 <div>
                     <span className="text-white text-sm">&copy; 2025 Built with &#129505;  by Giyu Tomioka</span>
                 </div>
-                <div className="flex flex-row justify-end gap-15">
+                <div className="hidden sm:flex flex-row justify-end gap-15">
                     {footerMenu.map((item, index) => (
                         <button key={index}
                         className="text-sm text-stone-200"
