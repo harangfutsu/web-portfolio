@@ -1,8 +1,8 @@
 const Resume = () => {
 
     return (
-        <div>
-            <h2>Resume</h2>
+        <div className="flex-1 flex-col px-8 py-5 bg-slate-950 min-h-full flex justify-center items-center text-left ">
+            <h2 className="text-white">Resume</h2>
         </div>
     )
 }

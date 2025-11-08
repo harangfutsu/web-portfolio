@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import TechStack from './pages/TechStack'
 import Resume from './pages/Resume'
 import Uses from './pages/Uses'
+import Project from './pages/Project'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/" element={<Dashboard/>}>
         <Route index element={<Home/>}/>
         <Route path='/resume' element={<Resume/>}/>
+        <Route path='/project' element={<Project/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/uses' element={<Uses/>}/>
         <Route path='/tech' element={<TechStack/>}/>
