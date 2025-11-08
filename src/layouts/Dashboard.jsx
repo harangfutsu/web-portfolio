@@ -18,17 +18,13 @@ const Dashboard = () => {
         {
             title : "PROJECT",
             page : "/project"
-        },
-        {
-            title : "CONTACT",
-            page : "/contact"
         }
     ]
 
     const footerMenu = [
         {
             title : "Uses",
-            page : "/uses"
+            page : "/"
         },
         {
             title : "Tech Stack",
@@ -63,20 +59,20 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="md:hidden flex flex-row justify-between items-center py-5 px-8 bg-slate-950">
-                    <span className="text-white font-semibold text-2xl"><span className="text-yellow-400">//</span> Giyu</span>
+                    <span className="text-white font-semibold text-2xl" onClick={() => navigate('/')}><span className="text-yellow-400">//</span> Giyu</span>
                     <img className="cursor-pointer" onClick={() => setOpen(!open)} src={smallMenu} alt="Menu" />
                 </div>
             </div>
             { open && (
                 <div className="absolute sm:hidden top-[74px] right-0 shadow-md z-50 w-full">
                     <ul className="flex flex-col bg-slate-950 divide-y divide-slate-800 border-1 border-b-slate-800 ">
-                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white">Resume
+                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white"><button onClick={() => navigate('/resume')}>Resume</button>
                         </li>
-                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white">Project
+                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white"><button onClick={() => navigate('/project')}>Project</button>
                         </li>
-                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white">Contact
+                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white"><button onClick={() => navigate('/tech')}>Tech Stack</button>
                         </li>                        
-                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white">Tech Stack
+                        <li className="flex items-center py-5 px-8 hover:bg-gray-100 text-white"><button onClick={() => navigate('/uses')}>Uses</button>
                         </li>                                              
                     </ul>
                 </div>
