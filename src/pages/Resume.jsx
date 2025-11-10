@@ -8,9 +8,9 @@ const Resume = () => {
                 <div className="flex flex-col gap-3">
                 <h2 className="text-white text-2xl sm:text-3xl font-bold"> <span className="md:underline decoration-wavy decoration-yellow-400 underline-offset-135">My Resume </span><span className="text-yellow-400">/ </span>CV</h2>
                 <div className="text-base text-gray-300 sm:text-lg flex flex-col gap-1">
-                <p >I'm highly skilled full-stack engineer with more than 8 years of</p>
-                <p >experience in building web applications. On this page, you can learn.</p>
-                <p>more about my knowledge stack and my previous work experience.</p>
+                <p>I'm a passionate Full-Stack Web Developer who enjoys building modern</p>
+                <p>web apps using React and Node.js. On this page, you can explore my technical</p>
+                <p>skills and the real-world projects I've built during my learning journey.</p>
                 <span className='hidden md:inline'>&nbsp;</span>
                 </div>
 

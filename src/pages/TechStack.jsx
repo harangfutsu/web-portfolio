@@ -7,9 +7,9 @@ const TechStack = () => {
                 <div className="flex flex-col gap-3">
                 <h2 className="text-white text-2xl sm:text-3xl font-bold"> <span className="md:underline decoration-wavy decoration-yellow-400 underline-offset-135">Tech </span><span className="text-yellow-400">Stack</span>!</h2>
                 <div className="text-base text-gray-300 sm:text-lg flex flex-col gap-1">
-                <p >I'm highly skilled full-stack engineer with more than 8 years of</p>
-                <p >experience in building web applications. On this page, you can learn.</p>
-                <p>more about my knowledge stack and my previous work experience.</p>
+                <p>I'm a passionate Full-Stack Web Developer who enjoys building modern</p>
+                <p>web apps using React and Node.js. On this page, you can explore my technical</p>
+                <p>skills and the real-world projects I've built during my learning journey.</p>
                 <span className='hidden md:inline'>&nbsp;</span>
                 </div>
 
@@ -17,9 +17,9 @@ const TechStack = () => {
                 <div className="flex flex-col gap-3">
                     <p className="text-white font-bold text-lg sm:text-xl">Skills</p>
                     <div className="text-base text-gray-300 sm:text-lg flex flex-col gap-1">
-                        <p>Here are the frameworks, libraries, services, and runtimes I Have experience</p>
-                        <p>with. This is not a complete list! I'm constantly gaining new skills, and hence it</p>
-                        <p>can be little bit outdated.</p>
+                        <p>Here are the frameworks, libraries, and tools I've been learning and</p>
+                        <p>using through real-world projects. This list keeps growing as I continue to</p>
+                        <p>explore and sharpen my skills in web development.</p>
                     </div>
                     <div className='text-sm text-gray-200 sm:text-base flex flex-col gap-1'>
                         <span className='flex flex-row gap-5'><button>React</button><button>Node.js</button></span>
